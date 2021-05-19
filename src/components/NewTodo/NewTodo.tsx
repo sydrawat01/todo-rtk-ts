@@ -1,7 +1,7 @@
 import { FC, FormEvent, useRef, useContext } from 'react';
 import classes from './NewTodo.module.css';
 
-import { TodoContext } from '../../store/todo-context';
+import { TodoContext } from '../../app/todo-context';
 
 const NewTodo: FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);

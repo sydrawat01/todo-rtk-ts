@@ -1,7 +1,7 @@
 import { FC, useContext } from 'react';
 import TodoItem from './TodoItem';
 
-import { TodoContext } from '../../store/todo-context';
+import { TodoContext } from '../../app/todo-context';
 
 import classes from './Todos.module.css';
 

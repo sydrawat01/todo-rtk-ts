@@ -1,7 +1,7 @@
 import NewTodo from './components/NewTodo/NewTodo';
 import Todos from './components/Todos/Todos';
 
-import { TodoContextProvider } from './store/todo-context';
+import { TodoContextProvider } from './app/todo-context';
 
 const App = () => {
   return (
