@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { Todo, TodoId, TodoText, TodoState } from '../../models/Todo';
+import { TodoId, TodoText, TodoState } from '../../models/Todo';
+import { v4 as uuidv4 } from 'uuid';
 
 const initialState = {
   items: [],
@@ -11,7 +12,7 @@ export const todoSlice = createSlice({
   initialState,
   reducers: {
     addTodo(state: TodoState, action: PayloadAction<TodoText>) {
-      const newTodo = new Todo(action.payload);
+      const newTodo = { id: uuidv4(), text: action.payload };
       state.items = state.items.concat(newTodo);
     },
     removeTodo(state: TodoState, action: PayloadAction<TodoId>) {
