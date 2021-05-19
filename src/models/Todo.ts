@@ -9,7 +9,7 @@ export class Todo {
     this.text = text;
   }
 }
-// export default Todo;
 
-// export type TodoId = string;
-// export type TodoState = {items: Todo[];}
+export type TodoId = string;
+export type TodoText = string;
+export type TodoState = { items: Todo[] };

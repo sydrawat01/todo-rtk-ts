@@ -1,19 +1,26 @@
-import { FC, useContext } from 'react';
+import { FC } from 'react';
 import TodoItem from './TodoItem';
 
-import { TodoContext } from '../../app/todo-context';
+import {
+  useAppSelector,
+  useAppDispatch,
+  selectTodos,
+} from '../../store/hooks/hooks';
+
+import { removeTodo } from '../../store/actions/todoActions';
 
 import classes from './Todos.module.css';
 
 const Todos: FC = () => {
-  const todoCtx = useContext(TodoContext);
+  const todos = useAppSelector(selectTodos);
+  const dispatch = useAppDispatch();
   return (
     <ul className={classes.list}>
-      {todoCtx.items.map((todo) => (
+      {todos.map((todo) => (
         <TodoItem
           key={todo.id}
           text={todo.text}
-          onRemoveTodo={todoCtx.removeTodo.bind(null, todo.id)}
+          onRemoveTodo={() => dispatch(removeTodo(todo.id))}
         />
       ))}
     </ul>

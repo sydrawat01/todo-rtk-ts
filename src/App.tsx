@@ -1,14 +1,15 @@
 import NewTodo from './components/NewTodo/NewTodo';
 import Todos from './components/Todos/Todos';
 
-import { TodoContextProvider } from './app/todo-context';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 
 const App = () => {
   return (
-    <TodoContextProvider>
+    <Provider store={store}>
       <NewTodo />
       <Todos />
-    </TodoContextProvider>
+    </Provider>
   );
 };
 

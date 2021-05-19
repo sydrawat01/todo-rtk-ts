@@ -1,18 +1,19 @@
-import { FC, FormEvent, useRef, useContext } from 'react';
+import { FC, FormEvent, useRef } from 'react';
 import classes from './NewTodo.module.css';
 
-import { TodoContext } from '../../app/todo-context';
+import { useAppDispatch } from '../../store/hooks/hooks';
+import { addTodo } from '../../store/actions/todoActions';
 
 const NewTodo: FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const todoCtx = useContext(TodoContext);
+  const dispatch = useAppDispatch();
 
   const submitFormHandler = (event: FormEvent) => {
     event.preventDefault();
     const enteredValue = inputRef.current!.value;
     //basic validation
     if (enteredValue.trim().length === 0) return;
-    todoCtx.addTodo(enteredValue);
+    dispatch(addTodo(enteredValue));
   };
   return (
     <form onSubmit={submitFormHandler} className={classes.form}>
