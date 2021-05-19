@@ -1,0 +1,7 @@
+.list {
+  list-style: none;
+  width: 40rem;
+  align-items: center;
+  padding: 0;
+  margin: 2rem auto;
+}

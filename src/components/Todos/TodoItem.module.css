@@ -1,0 +1,27 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: #f7f5ef;
+  margin: 1rem 0;
+}
+.todo li {
+  padding: 0.5rem;
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+.todo button {
+  background-color: #dddbd5;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.todo button:hover,
+.todo button:active {
+  background-color: #f7cbcb;
+}

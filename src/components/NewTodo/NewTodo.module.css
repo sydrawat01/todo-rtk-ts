@@ -1,0 +1,36 @@
+.form {
+  width: 40rem;
+  margin: 2rem auto;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.form input {
+  display: block;
+  width: 39rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  background-color: #f7f5ef;
+  border: none;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.form button {
+  background-color: #ebb002;
+  border: 1px solid #ebb002;
+  color: #201d0f;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form button:active,
+.form button:hover {
+  background-color: #ebc002;
+  border-color: #ebc002;
+}
